@@ -1,0 +1,20 @@
+<div class="row mt-5">
+  <div class="col-md-12">
+    <mat-card>
+      <form [formGroup]="todoform" (ngSubmit)="Onsubmittodo()">
+        <mat-card-content>
+          <mat-form-field appearance="fill" class="w-100">
+            <mat-label>Todo Item</mat-label>
+            <input formControlName="todoitem" type="text" matInput />
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" >
+            {{ iseditmode ? "Update Todo" : "Add Todo" }}
+          </button>
+          <!-- <button mat-raised-button color="primary" type="button" (click)="onupdate()" *ngIf="iseditmode">Update Todo</button> -->
+        </mat-card-actions>
+      </form>
+    </mat-card>
+  </div>
+</div>

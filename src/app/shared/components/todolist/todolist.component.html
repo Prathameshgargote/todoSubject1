@@ -1,9 +1,10 @@
 <div class="row mt-5">
   <div class="col-md-12">
-    <ul class="list-group" *ngIf="todoArr.length > 0; else notodo">
+    <ul class="list-group" *ngIf="todoArr.length > 0; else notodo" @listAnimation>
+
       <li
         *ngFor="let todo of todoArr"
-        class="list-group-item d-flex justify-content-between"
+        class="list-group-item d-flex justify-content-between my-2"
       >
         {{ todo.todoitem }}
         <div class="button">
